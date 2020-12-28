@@ -272,6 +272,11 @@ nonbreaking_prefixes = LazyCorpusLoader(
 perluniprops = LazyCorpusLoader(
     'perluniprops', UnicharsCorpusReader, r'(?!README|\.).*', nltk_data_subdir='misc', encoding='utf8')
 
+# arabic corpora support access
+watan_news = LazyCorpusLoader(
+    'watan', CategorizedPlaintextCorpusReader, 
+    r'.*/*\.html', cat_file='categories.txt', encoding='windows-1256')
+
 # mwa_ppdb = LazyCorpusLoader(
 #     'mwa_ppdb', MWAPPDBCorpusReader, r'(?!README|\.).*', nltk_data_subdir='misc', encoding='utf8')
 
